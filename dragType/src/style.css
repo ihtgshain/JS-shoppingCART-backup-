@@ -1,0 +1,258 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a{ 
+    text-decoration:none;
+    color:white;
+}
+/*=================== navigation bar ================================*/
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    padding: 25px 60px;
+    margin-bottom: 30px; 
+}
+
+.tImg {
+    width:50px;
+}
+
+/*==================== shop ==============================*/
+.shop {
+    width:75%;
+    height:600px;
+    display: grid;
+    grid-template-columns:repeat(4,240px);
+    gap: 20px;
+    justify-content:center;
+    float:left;
+}
+
+
+@media(max-width:1000px) {
+    .shop {
+        grid-template-columns: repeat(2,223px);
+    }
+}
+
+@media(max-width:500px) {
+    .shop {
+        grid-template-columns: repeat(1,223px);
+    }
+}
+
+#shop .item {
+    height:450px;
+    border: 3px solid #222;
+    border-radius: 8px;
+}
+#shop .bookImg {
+    width:220px;
+    padding-left:10px;
+    border-bottom:2px dotted black;
+}
+
+#shop .details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+#shop .price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+}
+
+#shop .description {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#shop .buttons, #shop .bi-trash-fill {
+    display:none;
+}
+
+
+/*====================== cart ===========================*/
+.cartZone {
+    width: 20%;
+    height:fit-content;
+    margin-right: 5%;
+    border: 3px dashed #AAA;
+    border-radius: 15px;
+    float: right;
+}
+
+#cartItems {
+    width: 100%;
+    height: fit-content;
+    
+    float: right;
+}
+
+.cart {
+    width: 70px;
+    height:75px;
+    position: relative;
+    background-color: #222;
+    color: white;
+    padding: 5px;
+    margin: 20px;
+    font-size: 55px;
+    border-radius: 4px;
+}
+
+#cartZone .item {
+    border: 3px solid #222;
+    border-radius: 8px;
+    display:flex;
+    flex-direction:row;
+    margin:5px;
+}
+
+#cartZone .bookImg {
+    height: 130px;
+    padding: 3px;
+    border-right:1px solid black;
+}
+
+#cartZone .details {
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    justify-content:center;
+}
+
+#cartZone .price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    color:white;
+    margin-top:5px;
+}
+
+#cartZone .description {
+    margin:5px;
+}
+#cartZone .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+    padding-right:10px;
+}
+
+#cartZone .buttons i {
+    cursor: pointer;
+}
+
+#label{
+    margin-right:20px;
+    margin-top:5px;
+}
+
+.titleAndTrash, .cartAntInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#cartItems .bi-trash-fill {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.dragging {
+    opacity: .7;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.HomeBtn,.checkout,.removeAll {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout{
+    background-color:green;
+    font-size:16px;
+}
+
+.removeAll {
+    background-color: red;
+    font-size: 16px;
+}
+
+.shopping-cart{
+    display:grid;
+    grid-template-columns:repeat(1,320px);
+    justify-content:center;
+    gap:15px;
+}
+
+.cart-item {
+    border: 2px solid #222;
+    border-radius: 5px;
+    display: flex;
+}
+.cart-item>img{
+    border-right:2px solid #222;
+}
+
+.title-price-x{
+    width:195px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.title-price{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.cart-item-price {
+    background-color: #222;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+.cart-item-name{
+    font-size:20px;
+}
